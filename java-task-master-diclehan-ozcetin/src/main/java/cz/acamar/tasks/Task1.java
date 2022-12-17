@@ -18,7 +18,10 @@ public class Task1 {
      */
     public int lengthOfLastWord(String str) {
         str=str.trim();
-        String result="";
+        String result=str;
+        // Because of no explanation about the case below: I assume that if there is no whitespace input
+        // itself is the first word is also the last word itself. So if there is no whitespace,
+        // last word become the str itself.
         int requestedIndex=str.lastIndexOf(' ');
         if(requestedIndex >= 0){
             result=str.substring(requestedIndex+1);
